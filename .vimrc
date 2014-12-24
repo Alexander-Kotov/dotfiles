@@ -20,6 +20,11 @@ if s:hard_mode == 1
 	noremap <right> <nop>
 	noremap <up> <nop>
 	noremap <down> <nop>
+
+	inoremap <left> <nop>
+	inoremap <right> <nop>
+	inoremap <up> <nop>
+	inoremap <down> <nop>
 else
 	unmap <left>
 	unmap <right>
@@ -40,7 +45,7 @@ imap <S-F4> <C-O>:cprevious
 nmap <F2> :w<CR>
 imap <F2> <C-O>:w<CR>
 
-set makeprg=bjam
+"set makeprg=bjam
 
 nmap <F7> :wall<CR>:make<CR>:cw<CR>
 
@@ -140,3 +145,5 @@ augroup workplace
 
 	au FileType cpp nnoremap <buffer> <localleader>cc I//<esc>
 augroup end
+
+set incsearch
